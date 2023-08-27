@@ -1,0 +1,9 @@
+FROM alpine
+FROM node:20-alpine
+RUN mkdir server
+ADD ./node_modules ./node_modules
+ADD ./server1.js ./server
+
+
+CMD node server/server1.js
+

@@ -1,0 +1,9 @@
+version: '1.0'
+services:
+  nginx-tes:
+    container_name: nginx-tes
+    image: nginx:latest
+    # expose:
+    #   # - 7000
+    ports:
+      - 80:80

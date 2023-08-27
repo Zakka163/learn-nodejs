@@ -85,7 +85,7 @@ async function getAllblogswithawait(paramlist = []){
     for (let i = 0; i < 10; i += 1) {
         let detailsid = paramlist[i].id
         let tempdata = await getDetailsData(detailsid)
-        console.log("push");
+        // console.log("push");
         detailArr.push(tempdata)
         
     }
@@ -94,19 +94,19 @@ async function getAllblogswithawait(paramlist = []){
 
 }
 
-async function getAllblogsawait(paramlist = []){
-    let detailArr = []
-    for (let i = 0; i < 10; i += 1) {
-        let detailsid = paramlist[i].id
-        let tempdata = await getDetailsData(detailsid)
-        console.log("push");
-        detailArr.push(tempdata)
+// async function getAllblogsawait(paramlist = []){
+//     let detailArr = []
+//     for (let i = 0; i < 10; i += 1) {
+//         let detailsid = paramlist[i].id
+//         let tempdata = await getDetailsData(detailsid)
+//         console.log("push");
+//         detailArr.push(tempdata)
         
-    }
-    console.log("exec out for");
-    console.log(detailArr);
+//     }
+//     console.log("exec out for");
+//     console.log(detailArr);
 
-}
+// }
 
 // getAllblogs(
     // [
@@ -132,9 +132,11 @@ async function getAllblogsawait(paramlist = []){
 // getListwithjson().then((res)=>{
 //     console.log(res);
 // })
+
+
+
 getAllblogswithawait(
     [
-        {"id":12},
         {"id":1},
         {"id":2},
         {"id":3},
