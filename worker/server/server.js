@@ -9,10 +9,13 @@ app.get('/', (req, res) => {
 //   res.send(`get...`)
   res.json({"data":`Hello from server ${getnum(false)}`})
 })
-app.get('/reset', (req, res) => {
-    current = 0
-    console.log("reset");
-  })
+app.get('/loop', (req, res) => {    
+//   res.send(`get...`)
+    setTimeout(()=>{
+    res.json({"data":`Hello from server`})
+    },5000)
+  
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

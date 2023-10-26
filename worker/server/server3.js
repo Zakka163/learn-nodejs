@@ -16,6 +16,13 @@ app.get('/', (req, res) => {
 //     console.log("reset");
 //   })
 
+app.get('/loop',(req,res)=>{
+  for (let i = 0; i < 100000; i++) {
+   console.log(i);
+  }
+  res.json({"data":`Finish server 3`})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

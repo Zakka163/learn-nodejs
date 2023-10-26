@@ -10,6 +10,14 @@ app.get('/', (req, res) => {
   console.log("get ",req.ip);
   res.json({"data":`Hello from server 1`})
 })
+
+
+app.get('/loop',(req,res)=>{
+  for (let i = 0; i < 100000; i++) {
+   console.log(i);
+  }
+  res.json({"data":`Finish server 1`})
+})
 // app.get('/reset', (req, res) => {
 //     current = 0
 //     console.log("reset");

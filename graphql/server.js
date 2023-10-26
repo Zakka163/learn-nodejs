@@ -29,19 +29,26 @@ type Mutation {
    }
 `);
 const root = {
-    getUser: () => {
-        return user
+    Query: {
+        getUser: () => {
+            return user
+        },
+        getUserById: (arg) => {
+            return user.find((x) => { return x.id == arg.id })
+        },
     },
-    getUserById: (arg) => {
-        return user.find((x) => { return x.id == arg.id })
-    },
-    createUser:(arg)=>{
-        const namaid =v4()
-        const st ={"id":namaid,"name":arg.input.name,"email":arg.input.email}
-        console.log(st);
-        user.push({id:namaid,name:arg.input.name,email:arg.input.email})
-        return st
+    Mutation:{
+        
+        createUser: (arg) => {
+            const namaid = v4()
+            const st = { "id": namaid, "name": arg.input.name, "email": arg.input.email }
+            console.log(st);
+            user.push({ id: namaid, name: arg.input.name, email: arg.input.email })
+            return st
+        }
     }
+    
+
 }
 const app = express();
 
