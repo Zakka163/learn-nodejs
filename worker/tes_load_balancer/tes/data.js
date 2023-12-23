@@ -1,4 +1,4 @@
-value = {
+const data = {
     'value': 0,
     get() {
         return this.value
@@ -7,6 +7,6 @@ value = {
         this.value = value
     }
 }
+let value = new data()
 
-
-module.exports = value
+module.exports = value 
