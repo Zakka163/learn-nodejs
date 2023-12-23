@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3003
 const value = require('./data.js')
-let value = 0
+// let value = 0
 app.get('/', (req, res) => {
 
     setTimeout(() => {
