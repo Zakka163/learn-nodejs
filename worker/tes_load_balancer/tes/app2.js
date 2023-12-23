@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
         console.log("server 3");
         console.log(value.get());
         res.json({ "data": `Hello World! ${value.get()}`, "server": 3 })
-    }, 10000)
+    }, 2000)
 
 })
 app.get('/reset', (req, res) => {

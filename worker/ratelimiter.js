@@ -22,9 +22,15 @@ function getAll(jumlah) {
 
 
 async function script() {
+    const t0 = performance.now();
 
-    const data = await Promise.all(getAll(20))
-    console.log(data);
+    const data = await Promise.allSettled(getAll(300))
+    for (let II = 0; II < data.length; II++) {
+        console.log(await data[II].value.json());
+
+    }
+    const t1 = performance.now();
+    console.log(`dalam waktu  ${t1 - t0} milliseconds.`);
 
 }
 
