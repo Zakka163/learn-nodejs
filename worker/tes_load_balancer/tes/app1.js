@@ -7,9 +7,9 @@ app.get('/', (req, res) => {
 
     setTimeout(() => {
         value.set(value.get() + 1)
-        console.log("waittt...");
+        console.log("server 2");
         console.log(value.get());
-        res.json({ "data": `Hello World! ${value.get()}` })
+        res.json({ "data": `Hello World! ${value.get()}`, "server": 2 })
     }, 10000)
 
 })
